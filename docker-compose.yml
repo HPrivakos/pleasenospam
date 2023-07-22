@@ -2,7 +2,7 @@ version: "3"
 
 services:
   app:
-    image: node:latest
+    image: node:14
     command: "npm start"
     restart: unless-stopped
     working_dir: /app
@@ -18,7 +18,7 @@ services:
       - "80:80"
 
   mail:
-    image: node:latest
+    image: node:14
     command: "npm run mail-server"
     restart: unless-stopped
     working_dir: /app
